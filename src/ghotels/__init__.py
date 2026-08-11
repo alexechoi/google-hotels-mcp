@@ -6,6 +6,15 @@ internal ``batchexecute`` RPC — no HTML scraping, no headless browser.
 
 from importlib.metadata import PackageNotFoundError, version
 
+from ghotels.api import AsyncGoogleHotels, EnrichedHotel, GoogleHotels
+from ghotels.config import Settings
+from ghotels.errors import (
+    GHotelsError,
+    MissingEntityKeyError,
+    ProtocolError,
+    RateLimitedError,
+    TransportError,
+)
 from ghotels.models import (
     Amenity,
     Brand,
@@ -37,25 +46,34 @@ except PackageNotFoundError:  # pragma: no cover - only when running from a raw 
 
 __all__ = [
     "Amenity",
+    "AsyncGoogleHotels",
     "Brand",
     "Cancellation",
     "CancellationKind",
     "CategoryScore",
     "Currency",
+    "EnrichedHotel",
+    "GHotelsError",
+    "GoogleHotels",
     "Guests",
     "Hotel",
     "HotelDetail",
     "Location",
     "MinRating",
+    "MissingEntityKeyError",
     "NearbyPlace",
     "PriceSnapshot",
     "PropertyType",
+    "ProtocolError",
     "Rate",
+    "RateLimitedError",
     "RatingSummary",
     "Review",
     "Room",
     "SearchFilters",
+    "Settings",
     "SortBy",
     "StayDates",
+    "TransportError",
     "__version__",
 ]
