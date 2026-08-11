@@ -1,0 +1,39 @@
+services:
+  # Published image — `docker compose --profile prod up`
+  ghotels:
+    image: ghcr.io/alexechoi/google-hotels-mcp:latest
+    container_name: ghotels
+    profiles: [prod]
+    ports:
+      - "8000:8000"
+    environment:
+      GHOTELS_RPS: "10"
+      HOST: 0.0.0.0
+      PORT: "8000"
+    # MCP streamable HTTP rejects bare GETs (405/406), so health is a raw
+    # TCP connect rather than an HTTP request.
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; socket.create_connection(('127.0.0.1', 8000), 2).close()",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+  # Local build — `docker compose --profile dev up --build`
+  ghotels-dev:
+    build: .
+    container_name: ghotels-dev
+    profiles: [dev]
+    ports:
+      - "8000:8000"
+    environment:
+      GHOTELS_RPS: "10"
+      HOST: 0.0.0.0
+      PORT: "8000"
+    restart: "no"
