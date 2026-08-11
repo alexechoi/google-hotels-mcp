@@ -41,6 +41,7 @@ dependencies = [
     "rich>=13,<15",
     "tenacity>=9.0",
     "typer>=0.15",
+    "typing-extensions>=4.6",
 ]
 
 [project.optional-dependencies]
@@ -121,6 +122,8 @@ ignore = [
     "PLR2004", # magic values are expected in assertions
     "D",       # test names document themselves
     "ANN",     # fixtures and parametrized args stay unannotated for readability
+    "ARG",     # test fakes take the real signature but ignore parts of it
+    "DTZ011",  # live tests legitimately anchor to today's date
     "SLF001",  # tests may exercise private helpers
 ]
 

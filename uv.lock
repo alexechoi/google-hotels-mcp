@@ -778,6 +778,7 @@ dependencies = [
     { name = "rich" },
     { name = "tenacity" },
     { name = "typer" },
+    { name = "typing-extensions" },
 ]
 
 [package.optional-dependencies]
@@ -803,6 +804,7 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9" },
     { name = "tenacity", specifier = ">=9.0" },
     { name = "typer", specifier = ">=0.15" },
+    { name = "typing-extensions", specifier = ">=4.6" },
 ]
 provides-extras = ["dev"]
 
