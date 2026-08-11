@@ -1,0 +1,128 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ghotels"
+version = "0.1.0"
+description = "Google Hotels for AI agents and the terminal — MCP server, CLI, and typed Python library over Google's batchexecute RPC"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Alex Choi" }]
+requires-python = ">=3.10"
+keywords = [
+    "google-hotels",
+    "hotels",
+    "hotel-search",
+    "travel",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "curl-cffi>=0.7.4",
+    "fastmcp>=3.2,<5",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.0",
+    "rich>=13,<15",
+    "tenacity>=9.0",
+    "typer>=0.15",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.14",
+    "pytest>=8",
+    "pytest-asyncio>=0.25",
+    "pytest-cov>=6",
+    "ruff>=0.9",
+]
+
+[project.scripts]
+ghotels = "ghotels.cli.app:run"
+
+[project.urls]
+Homepage = "https://github.com/alexechoi/google-hotels-mcp"
+Repository = "https://github.com/alexechoi/google-hotels-mcp"
+Issues = "https://github.com/alexechoi/google-hotels-mcp/issues"
+Changelog = "https://github.com/alexechoi/google-hotels-mcp/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ghotels"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/ghotels", "tests", "README.md", "LICENSE", "CHANGELOG.md", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--strict-markers", "-ra"]
+asyncio_mode = "auto"
+markers = [
+    "live: hits the real Google Hotels endpoint (deselected unless --live is passed)",
+    "slow: slow tests such as rate-limiter timing",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["ghotels"]
+
+[tool.coverage.report]
+precision = 1
+show_missing = true
+
+[tool.mypy]
+strict = true
+python_version = "3.10"
+mypy_path = "src"
+packages = ["ghotels"]
+warn_unreachable = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    # Docstring rules that conflict with each other or with the formatter.
+    "D203",   # incompatible with D211 (blank line before class docstring)
+    "D213",   # incompatible with D212 (multi-line summary position)
+    "COM812", # trailing-comma rule conflicts with the ruff formatter
+    # Missing-docstring rules: public modules/classes/functions are documented,
+    # but we do not require a docstring on every dunder, override, and helper.
+    "D105",
+    "D107",
+    # TODO-policing: TODOs are tracked in issues, not lint.
+    "TD",
+    "FIX",
+    # Per-file copyright headers: the repository LICENSE covers the project.
+    "CPY",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",    # asserts are the point of tests
+    "PLR2004", # magic values are expected in assertions
+    "D",       # test names document themselves
+    "ANN",     # fixtures and parametrized args stay unannotated for readability
+    "SLF001",  # tests may exercise private helpers
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
