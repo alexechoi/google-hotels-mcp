@@ -33,6 +33,9 @@ AMENITY_IDS: Final[dict[Amenity, int]] = {
     Amenity.EV_CHARGER: 61,
 }
 
+#: Reverse lookup used when parsing the response's amenity-availability pairs.
+AMENITY_BY_ID: Final[dict[int, Amenity]] = {wire_id: a for a, wire_id in AMENITY_IDS.items()}
+
 BRAND_IDS: Final[dict[Brand, int]] = {
     Brand.IHG: 17,
     Brand.BEST_WESTERN: 18,

@@ -62,12 +62,16 @@ class Room(BaseModel):
 
 
 class Review(BaseModel):
-    """One guest review sampled in the detail response."""
+    """One guest review sampled in the detail response.
+
+    Google does not always attach a numeric rating to sampled review text,
+    so ``rating`` is optional.
+    """
 
     model_config = ConfigDict(frozen=True)
 
     author: str | None = None
-    rating: int = Field(ge=1, le=5)
+    rating: int | None = Field(default=None, ge=1, le=5)
     body: str
     review_date: date | None = None
     source: str | None = Field(default=None, description="e.g. 'Google', 'Booking.com'.")
