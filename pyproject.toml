@@ -117,6 +117,10 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
+# Typer's declarative style: one (sometimes boolean) parameter per CLI flag.
+"src/ghotels/cli/**" = ["FBT001", "FBT002", "PLR0913", "PLR0917"]
+# MCP tool signatures ARE the client-facing schema: one parameter per tool arg.
+"src/ghotels/mcp/server.py" = ["FBT001", "FBT002", "PLR0913", "PLR0917"]
 "tests/**" = [
     "S101",    # asserts are the point of tests
     "PLR2004", # magic values are expected in assertions

@@ -10,6 +10,7 @@ import typer
 from ghotels import __version__
 from ghotels.cli.commands.details import details
 from ghotels.cli.commands.enrich import enrich
+from ghotels.cli.commands.mcp import mcp, mcp_http, setup
 from ghotels.cli.commands.search import search
 
 app = typer.Typer(
@@ -22,6 +23,9 @@ app = typer.Typer(
 app.command()(search)
 app.command()(details)
 app.command()(enrich)
+app.command(name="mcp")(mcp)
+app.command(name="mcp-http")(mcp_http)
+app.command()(setup)
 
 _KNOWN_COMMANDS = frozenset({"search", "details", "enrich", "mcp", "mcp-http", "setup"})
 
