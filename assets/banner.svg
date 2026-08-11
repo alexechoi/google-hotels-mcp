@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="ghotels — Google Hotels for AI agents and the terminal">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1024"/>
+      <stop offset="0.55" stop-color="#131b46"/>
+      <stop offset="1" stop-color="#0e2a4d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="0.5" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .wordmark { font: 800 76px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #f8fafc; letter-spacing: -2px; }
+      .tagline  { font: 400 24px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #b6c2e2; }
+      .pill     { font: 600 15px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #dbe7ff; }
+      .price    { font: 700 15px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #ffffff; }
+      .grid     { stroke: #ffffff; stroke-opacity: 0.04; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="16" fill="url(#glow)"/>
+
+  <!-- faint map grid -->
+  <g class="grid" stroke-width="1">
+    <path d="M0 75 H1200 M0 150 H1200 M0 225 H1200"/>
+    <path d="M200 0 V300 M400 0 V300 M600 0 V300 M800 0 V300 M1000 0 V300"/>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text class="wordmark" x="64" y="132">ghotels</text>
+  <rect x="68" y="156" width="230" height="5" rx="2.5" fill="url(#accent)"/>
+  <text class="tagline" x="64" y="204">Google Hotels for AI agents and the terminal</text>
+
+  <!-- surface pills -->
+  <g>
+    <rect x="64" y="228" width="118" height="34" rx="17" fill="#1d2a5e" stroke="#3b4c8f" stroke-width="1"/>
+    <text class="pill" x="123" y="250" text-anchor="middle">MCP server</text>
+    <rect x="194" y="228" width="70" height="34" rx="17" fill="#1d2a5e" stroke="#3b4c8f" stroke-width="1"/>
+    <text class="pill" x="229" y="250" text-anchor="middle">CLI</text>
+    <rect x="276" y="228" width="140" height="34" rx="17" fill="#1d2a5e" stroke="#3b4c8f" stroke-width="1"/>
+    <text class="pill" x="346" y="250" text-anchor="middle">Python library</text>
+    <rect x="428" y="228" width="118" height="34" rx="17" fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1"/>
+    <text class="pill" x="487" y="250" text-anchor="middle" fill="#7ee7c0">no API key</text>
+  </g>
+
+  <!-- map-style price pins, echoing Google Hotels -->
+  <g>
+    <g transform="translate(760 96)">
+      <rect x="-44" y="-18" width="88" height="36" rx="18" fill="#f8fafc"/>
+      <path d="M-8 17 L0 30 L8 17 Z" fill="#f8fafc"/>
+      <text class="price" x="0" y="6" text-anchor="middle" fill="#0b1024">$240</text>
+    </g>
+    <g transform="translate(918 60)" opacity="0.92">
+      <rect x="-52" y="-18" width="104" height="36" rx="18" fill="#2563eb"/>
+      <path d="M-8 17 L0 30 L8 17 Z" fill="#2563eb"/>
+      <text class="price" x="0" y="6" text-anchor="middle">¥18,400</text>
+    </g>
+    <g transform="translate(1052 128)" opacity="0.85">
+      <rect x="-44" y="-18" width="88" height="36" rx="18" fill="#1d2a5e" stroke="#4f6ac2" stroke-width="1"/>
+      <path d="M-8 17 L0 30 L8 17 Z" fill="#1d2a5e"/>
+      <text class="price" x="0" y="6" text-anchor="middle">€150</text>
+    </g>
+    <g transform="translate(852 190)" opacity="0.8">
+      <rect x="-44" y="-18" width="88" height="36" rx="18" fill="#1d2a5e" stroke="#4f6ac2" stroke-width="1"/>
+      <path d="M-8 17 L0 30 L8 17 Z" fill="#1d2a5e"/>
+      <text class="price" x="0" y="6" text-anchor="middle">£210</text>
+    </g>
+    <g transform="translate(1010 232)" opacity="0.75">
+      <rect x="-52" y="-18" width="104" height="36" rx="18" fill="#134e4a" stroke="#34d399" stroke-width="1"/>
+      <path d="M-8 17 L0 30 L8 17 Z" fill="#134e4a"/>
+      <text class="price" x="0" y="6" text-anchor="middle" fill="#a7f3d0">4.6 ★</text>
+    </g>
+  </g>
+
+  <!-- bottom accent -->
+  <rect x="0" y="294" width="1200" height="6" fill="url(#accent)" opacity="0.9"/>
+</svg>

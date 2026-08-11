@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="430" viewBox="0 0 1160 430" role="img" aria-label="ghotels architecture: MCP clients, CLI, and Python apps flow through one typed core to Google's batchexecute RPC">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1230"/>
+      <stop offset="1" stop-color="#0b1024"/>
+    </linearGradient>
+    <linearGradient id="corebar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5f74b8"/>
+    </marker>
+    <style>
+      .h        { font: 700 17px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #f1f5f9; }
+      .s        { font: 400 13px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #93a4cd; }
+      .code     { font: 600 13px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #7dd3fc; }
+      .step     { font: 600 14px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #dbe7ff; }
+      .lbl      { font: 600 12px -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #8aa0d8; letter-spacing: 1.2px; }
+      .box      { fill: #141d49; stroke: #34437f; stroke-width: 1.2; }
+      .corebox  { fill: #10183c; stroke: #3d54a8; stroke-width: 1.4; }
+      .goog     { fill: #10241f; stroke: #2f8f6f; stroke-width: 1.4; }
+      .edge     { stroke: #5f74b8; stroke-width: 1.6; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="430" rx="14" fill="url(#panel)"/>
+
+  <!-- Surfaces column -->
+  <text class="lbl" x="60" y="52">SURFACES</text>
+  <g>
+    <rect class="box" x="60" y="70" width="230" height="74" rx="10"/>
+    <text class="h" x="80" y="100">MCP clients</text>
+    <text class="s" x="80" y="122">Claude · Codex · Cursor · ChatGPT</text>
+
+    <rect class="box" x="60" y="164" width="230" height="74" rx="10"/>
+    <text class="h" x="80" y="194">Terminal</text>
+    <text class="code" x="80" y="216">ghotels "tokyo hotels"</text>
+
+    <rect class="box" x="60" y="258" width="230" height="74" rx="10"/>
+    <text class="h" x="80" y="288">Python apps</text>
+    <text class="code" x="80" y="310">await api.search(...)</text>
+  </g>
+
+  <!-- edges into core -->
+  <path class="edge" d="M290 107 C340 107 330 160 378 178" marker-end="url(#arrow)"/>
+  <path class="edge" d="M290 201 H378" marker-end="url(#arrow)"/>
+  <path class="edge" d="M290 295 C340 295 330 242 378 224" marker-end="url(#arrow)"/>
+  <text class="s" x="304" y="94">3 tools · 2 prompts</text>
+  <text class="s" x="304" y="192">text · json · jsonl</text>
+  <text class="s" x="304" y="322">async + sync</text>
+
+  <!-- Core -->
+  <text class="lbl" x="380" y="52">ONE TYPED CORE</text>
+  <g>
+    <rect class="corebox" x="380" y="70" width="530" height="290" rx="12"/>
+    <rect x="380" y="70" width="530" height="5" rx="2.5" fill="url(#corebar)"/>
+
+    <text class="step" x="410" y="112">1 · SearchFilters — validated pydantic models</text>
+    <text class="s" x="432" y="132">dates · party · stars · brands · amenities · price band · sort</text>
+
+    <text class="step" x="410" y="166">2 · protocol — request builder</text>
+    <text class="s" x="432" y="186">documented slot map → f.req envelope (docs/PROTOCOL.md)</text>
+
+    <text class="step" x="410" y="220">3 · transport — paced &amp; retried</text>
+    <text class="s" x="432" y="240">async token bucket · Chrome TLS impersonation · backoff on 429/5xx</text>
+
+    <text class="step" x="410" y="274">4 · parsing — slot walkers</text>
+    <text class="s" x="432" y="294">envelope decode → hotel entries → deadline anchoring (no wall clock)</text>
+
+    <text class="step" x="410" y="328">5 · typed results</text>
+    <text class="s" x="432" y="348">Hotel · HotelDetail · Room · Rate · Cancellation — frozen snapshots</text>
+  </g>
+
+  <!-- Google -->
+  <text class="lbl" x="960" y="52">GOOGLE</text>
+  <g>
+    <rect class="goog" x="960" y="70" width="140" height="290" rx="12"/>
+    <text class="h" x="1030" y="196" text-anchor="middle">batchexecute</text>
+    <text class="s" x="1030" y="218" text-anchor="middle">internal RPC</text>
+    <text class="code" x="1030" y="246" text-anchor="middle" fill="#86efac">AtySUc</text>
+  </g>
+  <path class="edge" d="M910 190 H952" marker-end="url(#arrow)"/>
+  <path class="edge" d="M952 240 H918" marker-end="url(#arrow)"/>
+  <text class="s" x="931" y="178" text-anchor="middle">POST</text>
+  <text class="s" x="935" y="262" text-anchor="middle">frames</text>
+
+  <text class="s" x="60" y="400">Same RPC the Google Hotels UI calls — no HTML scraping, no headless browser, no third-party API key.</text>
+</svg>

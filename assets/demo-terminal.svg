@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-label="Terminal demo of a ghotels hotel search">
+  <defs>
+    <linearGradient id="term" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11162e"/>
+      <stop offset="1" stop-color="#0b0f22"/>
+    </linearGradient>
+    <style>
+      .t   { font: 400 15px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #c9d4f2; white-space: pre; }
+      .p   { fill: #34d399; font-weight: 600; }
+      .cmd { fill: #f1f5f9; }
+      .fl  { fill: #7dd3fc; }
+      .dim { fill: #64748b; }
+      .hd  { fill: #a5b4fc; font-weight: 600; }
+      .num { fill: #fbbf24; }
+      .star{ fill: #f59e0b; }
+      .ok  { fill: #86efac; }
+    </style>
+  </defs>
+
+  <!-- window chrome -->
+  <rect width="980" height="560" rx="14" fill="url(#term)" stroke="#2a3766" stroke-width="1"/>
+  <circle cx="30" cy="28" r="7" fill="#ff5f57"/>
+  <circle cx="54" cy="28" r="7" fill="#febc2e"/>
+  <circle cx="78" cy="28" r="7" fill="#28c840"/>
+  <text class="t dim" x="490" y="33" text-anchor="middle">ghotels — zsh</text>
+
+  <g transform="translate(36 0)">
+    <text class="t" x="0" y="84"><tspan class="p">❯</tspan> <tspan class="cmd">ghotels</tspan> <tspan class="cmd">"new york hotels"</tspan> <tspan class="fl">--check-in</tspan> 2026-09-10 <tspan class="fl">--check-out</tspan> 2026-09-13 <tspan class="fl">--stars</tspan> 5</text>
+
+    <text class="t hd"  x="0" y="128">┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓</text>
+    <text class="t hd"  x="0" y="152">┃ # ┃ Hotel                        ┃ Stars ┃ Price/night ┃      Rating ┃</text>
+    <text class="t hd"  x="0" y="176">┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩</text>
+    <text class="t" x="0" y="200">│ 1 │ The Bowery Hotel             │  <tspan class="star">5</tspan>    │     <tspan class="num">350 USD</tspan> │ 4.5 (1,698) │</text>
+    <text class="t" x="0" y="224">│ 2 │ Mandarin Oriental, New York  │  <tspan class="star">5</tspan>    │     <tspan class="num">940 USD</tspan> │ 4.6 (1,841) │</text>
+    <text class="t" x="0" y="248">│ 3 │ The Plaza                    │  <tspan class="star">5</tspan>    │   <tspan class="num">1,529 USD</tspan> │ 4.5 (6,759) │</text>
+    <text class="t" x="0" y="272">│ 4 │ Four Seasons Hotel New York  │  <tspan class="star">5</tspan>    │   <tspan class="num">1,295 USD</tspan> │ 4.6 (3,112) │</text>
+    <text class="t" x="0" y="296">└───┴──────────────────────────────┴───────┴─────────────┴─────────────┘</text>
+    <text class="t dim" x="0" y="324">4 hotels · 4 with entity keys (use `ghotels details &lt;entity-key&gt;` for rooms &amp; rates)</text>
+
+    <text class="t" x="0" y="372"><tspan class="p">❯</tspan> <tspan class="cmd">ghotels details</tspan> ChkQ8aH… <tspan class="fl">--check-in</tspan> 2026-09-10 <tspan class="fl">--check-out</tspan> 2026-09-13</text>
+    <text class="t" x="0" y="404"><tspan class="cmd">Mandarin Oriental, New York</tspan></text>
+    <text class="t" x="0" y="428">  <tspan class="dim">Address:</tspan> 80 Columbus Cir, New York, NY 10023</text>
+    <text class="t" x="0" y="456">  Booking.com        <tspan class="num">1,084 USD</tspan>   <tspan class="ok">free until 2026-09-08</tspan></text>
+    <text class="t" x="0" y="480">  Mandarinoriental   <tspan class="num">1,146 USD</tspan>   <tspan class="ok">free until 2026-09-09</tspan></text>
+    <text class="t" x="0" y="504">  Hotels.com         <tspan class="num">1,147 USD</tspan>   <tspan class="ok">free until 2026-09-09</tspan></text>
+    <text class="t" x="0" y="532"><tspan class="p">❯</tspan> <tspan class="dim">▊</tspan></text>
+  </g>
+</svg>
