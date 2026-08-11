@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+junit*.xml
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Local agent tooling (machine-specific paths; see CLAUDE.md / AGENTS.md)
+.concord/
+.mcp.json
+.codex/
+.cursor/
+.claude/
