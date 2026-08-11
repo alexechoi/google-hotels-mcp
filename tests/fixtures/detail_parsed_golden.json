@@ -1,0 +1,208 @@
+{
+ "name": "Mandarin Oriental, New York",
+ "entity_key": "ChYInb3Dn7D48odRGgovbS8wODBteGw4EAE",
+ "kgmid": "/m/080mxl8",
+ "fid": "0x89c258f61de5cd2f:0x510fcbc303f0de9d",
+ "google_hotel_id": "6376045022105150238",
+ "latitude": 40.7688844,
+ "longitude": -73.98304399999999,
+ "star_class": 5,
+ "star_class_label": "5-star hotel",
+ "price": null,
+ "rating": {
+  "score": 4.6,
+  "review_count": 1841,
+  "histogram": {
+   "5": 1423,
+   "4": 245,
+   "3": 80,
+   "2": 34,
+   "1": 59
+  },
+  "categories": [
+   {
+    "label": "cleanliness",
+    "score": 4.4
+   },
+   {
+    "label": "location",
+    "score": 4.8
+   },
+   {
+    "label": "value",
+    "score": 4.7
+   },
+   {
+    "label": "rooms",
+    "score": 4.5
+   },
+   {
+    "label": "service",
+    "score": 4.1
+   }
+  ]
+ },
+ "amenities": [
+  "BAR",
+  "BEACH_ACCESS",
+  "GYM",
+  "INDOOR_POOL",
+  "PET_FRIENDLY",
+  "RESTAURANT",
+  "WIFI"
+ ],
+ "deal_percent": null,
+ "check_in_time": "3:00 PM",
+ "check_out_time": "12:00 PM",
+ "nearby": [
+  {
+   "name": "59 St-Columbus Circle",
+   "travel_mode": "transit",
+   "duration_minutes": 3,
+   "distance_text": "3 min"
+  },
+  {
+   "name": "Grand Central Terminal",
+   "travel_mode": "mode_8",
+   "duration_minutes": 13,
+   "distance_text": "13 min"
+  },
+  {
+   "name": "Penn Station",
+   "travel_mode": "mode_8",
+   "duration_minutes": 14,
+   "distance_text": "14 min"
+  },
+  {
+   "name": "33 St",
+   "travel_mode": "mode_8",
+   "duration_minutes": 15,
+   "distance_text": "15 min"
+  },
+  {
+   "name": "57 St-7 Av",
+   "travel_mode": "transit",
+   "duration_minutes": 9,
+   "distance_text": "9 min"
+  },
+  {
+   "name": "John F. Kennedy International Airport",
+   "travel_mode": "walk",
+   "duration_minutes": 46,
+   "distance_text": "46 min"
+  },
+  {
+   "name": "Newark Liberty International Airport",
+   "travel_mode": "walk",
+   "duration_minutes": 31,
+   "distance_text": "31 min"
+  },
+  {
+   "name": "LaGuardia Airport",
+   "travel_mode": "walk",
+   "duration_minutes": 31,
+   "distance_text": "31 min"
+  },
+  {
+   "name": "Westchester County Airport",
+   "travel_mode": "walk",
+   "duration_minutes": 45,
+   "distance_text": "45 min"
+  }
+ ],
+ "image_urls": [
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmMC_gkS3eGnHkaXebbl8TtmrckOR3eHPO-0oYTlF814WrqzDD4-t34eVEUvuUuc6PhwVnK5DeKyztdvSRvHfuXjwMEq8BBC0YOLw9PlTyXYfJcOsk7ws-jrFhGz4AvhCiBAOTO=s150-w92-h150-n-k-no",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmMC_gkS3eGnHkaXebbl8TtmrckOR3eHPO-0oYTlF814WrqzDD4-t34eVEUvuUuc6PhwVnK5DeKyztdvSRvHfuXjwMEq8BBC0YOLw9PlTyXYfJcOsk7ws-jrFhGz4AvhCiBAOTO=s287-w287-h192-n-k-no-v1",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4r2Mu8tyJU5rwfQBIiLN6xWRdshuqlIkHhQejSSxOG4Pl-X3XTZ66B_Gb2p0j9_8QBIq8aOA6SZQq8UR0mrO_PpzlStuhGeyL17BqN_cXvTnPj_9OWRXaKCyhCgLpDHWNMuoG=s287-w287-h192-n-k-no-v1",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWljzQeCpoor4BNCQNn9lP1eZxIiAIwAQhifoXkY2CDkzpQLwdkrgvujjA9WyTbhecgAnkc-9nXYPWB91u7oiPKrwFtlavmDm0ezBjGk1lSYpCvL9Kf9uQV6_QHvZsStV4UmFVnJKj2f3_xc=s287-w287-h192-n-k-no-v1",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlXgarUFoSsFlqahksQ3x73KVbj7nGP9IgKh69UuieTJ5gAMMOQPfOwZW60J0uo06bEv9S1NAoMfunlu3Ty5gA3_RnX7yRTbc-ZD4Clo5pRSgzOV8WRaYAQCmEluPQQl3A7tIvd=s287-w287-h192-n-k-no-v1",
+  "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWli06deC-Xz5V_HXVSmo-OniUoFAc7PHVvLAeWbUOKmpnfyXN4ROEW73LyqvYvx01xf4icJwr9XtD8L7c_wlLUOavPlVgZen3Vn1mZM52-Q9NO0pOCrp-Xx422-EIbPABmJFOCK=s287-w287-h192-n-k-no-v1",
+  "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGlUM8RTe4yhPEJr0aIStYJdKtU8bWM2KWyUiN8_DeOG5G3dNTU1kiHjMVPhXkEIkse77tTh0jO8WdIkUtygmyxSaMnj6pCgYtP0Ww4YCEO1tJJJDkN7C9RsQxyl_kol-0zZwNT3ZQI2KqusEvGPzeascOMJZnUoSgWJkq4AWXCB3VU9H_3FtDO=s287-w287-h192-n-k-no-v1",
+  "https://d2hyz2bfif3cr8.cloudfront.net/imageRepo/2/0/187/351/519/new-york-hudson-river-skyline-view-3_O.jpg",
+  "https://lh3.googleusercontent.com/gps-proxy/ALd4DhF2o_XuPzeJXwkA1D6VaeOiphQ7Wct53hL2_KxSEyKTznNP9vIN0WiOhCReWJj26kLkEaXt9wMFYrJU-BTB2olXbAy6eyv0pMhhbM4xzkaiy2pNkU5MkXY3RrVafPPaMEcxfXr15KMiV_SI0pZ-dh6OxOvikKvZcWm3C6lVEp3tv603ZhC7EdM=s287-w287-h192-n-k-no-v1",
+  "https://d2hyz2bfif3cr8.cloudfront.net/imageRepo/2/0/185/32/740/new-york-hudson-river-view-room-twin_O.jpg"
+ ],
+ "description": "Luxe rooms in an upscale high-rise lodging with a refined spa, modern American dining & a bar.",
+ "address": "80 Columbus Cir, New York, NY 10023, United States",
+ "phone": "+1 212-805-8800",
+ "rooms": [
+  {
+   "name": "Standard Room",
+   "description": null,
+   "bed_config": null,
+   "max_occupancy": null,
+   "rates": [
+    {
+     "provider": "Booking.com",
+     "price": 1084,
+     "currency": "USD",
+     "cancellation": {
+      "kind": "free_until",
+      "free_until": "2026-09-08",
+      "description": "Free cancellation until Sep 8 11:59 PM"
+     },
+     "breakfast_included": false,
+     "includes_taxes_and_fees": false,
+     "booking_url": "https://www.google.com/aclk?sa=l&ai=DChsSEwi3-vm--5iWAxVXUkECHcToDKkYACICCAEQRxoCd3M&co=1&ase=2&gclid=EAIaIQobChMIt_r5vvuYlgMVV1JBAh3E6AypEAoYAyABEgKxcfD_BwE&category=acrcp_v1_48&sig=AOD64_27tlHkoBWjn4OheapvvBoeMPoVzA&adurl"
+    },
+    {
+     "provider": "Mandarinoriental.com",
+     "price": 1146,
+     "currency": "USD",
+     "cancellation": {
+      "kind": "free_until",
+      "free_until": "2026-09-09",
+      "description": "Free cancellation until Sep 9 6:00 PM"
+     },
+     "breakfast_included": false,
+     "includes_taxes_and_fees": false,
+     "booking_url": "https://www.google.com/aclk?sa=l&ai=DChsSEwi3-vm--5iWAxVXUkECHcToDKkYACICCAEQARoCd3M&co=1&ase=2&gclid=EAIaIQobChMIt_r5vvuYlgMVV1JBAh3E6AypEAoYAiABEgJBb_D_BwE&category=acrcp_v1_48&sig=AOD64_1zjTMGuPm5Jia-CmBQmu4ZPLe_MA&adurl"
+    },
+    {
+     "provider": "Hotels.com",
+     "price": 1147,
+     "currency": "USD",
+     "cancellation": {
+      "kind": "free_until",
+      "free_until": "2026-09-09",
+      "description": "Free cancellation until Sep 9 6:00 PM"
+     },
+     "breakfast_included": false,
+     "includes_taxes_and_fees": false,
+     "booking_url": "https://www.google.com/aclk?sa=l&ai=DChsSEwi3-vm--5iWAxVXUkECHcToDKkYACICCAEQFRoCd3M&co=1&ase=2&gclid=EAIaIQobChMIt_r5vvuYlgMVV1JBAh3E6AypEAoYASABEgLUE_D_BwE&category=acrcp_v1_48&sig=AOD64_0tpup-PrDtvZY8Bui_mr6qoVP4uA&adurl"
+    },
+    {
+     "provider": "Expedia.co.uk",
+     "price": 1147,
+     "currency": "USD",
+     "cancellation": {
+      "kind": "free_until",
+      "free_until": "2026-09-09",
+      "description": "Free cancellation until Sep 9 6:00 PM"
+     },
+     "breakfast_included": false,
+     "includes_taxes_and_fees": false,
+     "booking_url": "https://www.google.com/aclk?sa=l&ai=DChsSEwi3-vm--5iWAxVXUkECHcToDKkYACICCAEQLhoCd3M&co=1&ase=2&gclid=EAIaIQobChMIt_r5vvuYlgMVV1JBAh3E6AypEAoYBCABEgKWMPD_BwE&category=acrcp_v1_48&sig=AOD64_0NDioMg6WuT8x1jCc1g9-vWvEsWQ&adurl"
+    }
+   ]
+  }
+ ],
+ "amenity_labels": [],
+ "nearby_attractions": [],
+ "reviews": [
+  {
+   "author": "Rose E M",
+   "rating": null,
+   "body": "\"Then the night of my event, 10 people were stuck in the elevator for 20 mins.\"",
+   "review_date": null,
+   "source": null
+  },
+  {
+   "author": "James Faulkner",
+   "rating": null,
+   "body": "\"Great cleaners, check in staff, in room dining staff and concierge .\"",
+   "review_date": null,
+   "source": null
+  }
+ ]
+}
